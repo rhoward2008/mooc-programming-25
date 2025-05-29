@@ -5,9 +5,14 @@
 def palindromes(word:str) -> bool:
     return word == word[::-1]
 
-if __name__ == '__main__':
-    word = input('Please type in a palindrome:')
-    if palindromes(word):
-       print(f'{word} is a palindrome!')
-    else:
-        print("That wasn't a palindrome")
+def main():
+    while True:
+        word = input('Please type in a palindrome:')
+        if palindromes(word):
+            print(f'{word} is a palindrome!')
+            break
+        else:
+            print("That wasn't a palindrome")
+
+#if __name__ == '__main__':
+#   main()

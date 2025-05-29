@@ -3,9 +3,9 @@ list_items = []
 list_sorted = []
 
 while True:
-    item = input('New item: ')
+    item = int(input('New item: '))
 
-    if item == '0':
+    if item == 0:
         print('Bye!')
         break
 
@@ -13,5 +13,5 @@ while True:
     list_sorted.append(item)
     list_sorted.sort()
 
-    print(f'The list is now: {list_items}')
+    print(f'The list now: {list_items}')
     print(f'The list in order: {list_sorted}')
