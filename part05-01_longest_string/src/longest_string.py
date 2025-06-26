@@ -13,5 +13,5 @@ def longest(strings:list) -> str:
 
 if __name__ == "__main__":
     #strings = ["hi", "hiya", "hello", "howdydoody", "hi there","sdfffffffffffffffffffff"]
-    strings = ["sdfffffffffffffffffffff", "hiya", "hello", "howdydoody", "hi there",""]
+    strings = ["s", "hiya", "hello", "howdydoody", "hi there",""]
     print(longest(strings))
