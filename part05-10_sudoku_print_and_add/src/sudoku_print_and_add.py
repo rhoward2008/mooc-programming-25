@@ -7,7 +7,7 @@ def print_sudoku(sudoku:list):
             if row[col]:
                 print(row[col],end='')
             else:
-                print('_',end='')
+                print('_',end=' ')
         
         print('\n')
 
