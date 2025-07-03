@@ -9,7 +9,7 @@ while True:
         if search_name in phone_dict:
             print(phone_dict[search_name])
         else:
-            print('no number:')
+            print('no number')
     elif num == 2:
         add_name = input('name: ')
         add_number = input('number: ')
