@@ -2,3 +2,6 @@
 */tmc/
 */_pycache_/
 *.pyc
+*.txt
+*.csv
+*.json
