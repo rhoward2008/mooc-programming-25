@@ -5,8 +5,10 @@ full_path = PATH + 'numbers.txt'
 def largest():
     with open(full_path,'r') as new_file:
         
-        largest = 0
+        largest = int(new_file.readline().replace('\n',''))
 
+        #print(f'Var is initialized to the first line: {largest}')
+        
         for line in new_file:
             new_line = int(line.replace('\n',''))
 
