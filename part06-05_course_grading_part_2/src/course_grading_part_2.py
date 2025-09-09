@@ -1,5 +1,3 @@
-# write your solution here
-# write your solution here
 PATH = 'c:\\Users\\bension.dworkin\\github_repo\\mooc-programming-25\\part06-txt_files\\'
 DEBUG = False
 
@@ -55,7 +53,7 @@ with open(exam_path,'r') as exam_file:
         else:
             exam_dict[exam_list[0]] = [int(x.strip()) for x in exam_list[1:]]
 
-print(exam_dict)
+#print(exam_dict)
 
 for id, name in student_dict.items():
     
