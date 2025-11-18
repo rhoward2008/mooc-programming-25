@@ -58,17 +58,43 @@ def search_by_name(filename:str, word:str) -> list:
     #print(f'returning found list: {found_recipes}')
     return found_recipes 
 
-def search_by_time(filename:str, prep_time: int):
-    pass
+def search_by_time(filename:str, prep_time: int) -> list:
+    recipe_dict = create_dict(filename)
 
+    #print(f'seach by time: dict:: {recipe_dict}')
+    recipe_time_list = []
 
+    for key,value in recipe_dict.items():
+        #print(f'Recipe name: {key}')
+        #print(f'Recipe value: {value}')
+        if prep_time >= int(value[0]):
+            recipe_time_list.append(key + ', preparation time ' + value[0] + ' min')
+
+    #print(recipe_time_list)
+    return recipe_time_list
+
+def search_by_ingredient(filename:str, ingredient:str) -> list:
+    recipe_dict = create_dict(filename)
+
+    recipe_ing_list = []
+
+    for key,value in recipe_dict.items():
+        if ingredient.lower() in value[1]:
+            recipe_ing_list.append(key + ', preparation time ' + value[0] + ' min')
+
+    return recipe_ing_list
 
 if __name__ == '__main__':
-    #new_dict = create_dict(file_name)
-    #print(f'new_dict: {new_dict}')
-    #print('hello')
-    name = 'cake'
-    found_recipes = search_by_name(file_name,name)
+    
+    #name = 'cake'
+    #found_recipes = search_by_name(file_name, name)
 
-    for recipe in found_recipes:
-        print(recipe)
+    #prep_time = 35
+    #timed_recipes = search_by_time(file_name, prep_time)
+
+    find_ingredient = 'eggs'
+    ingredient_recipes = search_by_ingredient(file_name, find_ingredient)
+    
+    print(ingredient_recipes)
+
+    
