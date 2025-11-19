@@ -6,11 +6,17 @@ def add_student(students: dict, name: str):
         students[name] = []
 
 def print_student(students: dict, name: str):
+    grade_sum = 0
+
     if name in students:
         if students[name]:
-            print(f'{name}: \n {len(students[name])} completed courses')
+            print(f'{name}: \n {len(students[name])} completed courses:')
             for grade in students[name]:
                 print(f'  {grade[0]} {grade[1]} ')
+                grade_sum += grade[1]
+            
+            avg_grade = grade_sum / len(students[name])
+            print(f' average grade {avg_grade}')
         else:
             print(f'{name}: \n no completed courses')
     else:
@@ -56,7 +62,7 @@ def summary(students: dict):
                 best_name = name
                 best_grade = sum / len(classes)
 
-    print(f'Student count: {count}')
+    print(f'students {count}')
     print(f'most courses completed {most_count} {most_name}')
     print(f'best average grade {best_grade} {best_name}')
     
@@ -65,14 +71,14 @@ def summary(students: dict):
 if __name__ == '__main__':
     students = {}
     add_student(students, "Peter")
-    add_student(students, "Eliza")
-    add_course(students, "Peter", ("Data Structures and Algorithms", 1))
-    add_course(students, "Peter", ("Introduction to Programming", 1))
-    add_course(students, "Peter", ("Advanced Course in Programming", 1))
-    add_course(students, "Eliza", ("Introduction to Programming", 5))
-    add_course(students, "Eliza", ("Introduction to Computer Science", 4))
-    summary(students)
+    #add_student(students, "Eliza")
+    #add_course(students, "Peter", ("Data Structures and Algorithms", 1))
+    add_course(students, "Peter", ("Introduction to Programming", 3))
+    add_course(students, "Peter", ("Advanced Course in Programming", 2))
+    #add_course(students, "Eliza", ("Introduction to Programming", 5))
+    #add_course(students, "Eliza", ("Introduction to Computer Science", 4))
+    #summary(students)
     #print(f'break1: {students}')
     print_student(students, "Peter")
-    summary(students)
+    #summary(students)
     #print(f'break2: {students}')
