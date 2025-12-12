@@ -1,8 +1,11 @@
 # write your solution here
 PATH = 'c:\\Users\\bension.dworkin\\github_repo\\mooc-programming-25\\part06-txt_files\\'
+#PATH = 'c:\\Users\\bension\\UHelsinki\\PythonIntro\\tmcdata\\mooc-programming-25\\part06-01_largest_number\\src\\'
 full_path = PATH + 'numbers.txt'
 
+
 def largest():
+    ##with open('numbers.txt','r') as new_file:
     with open(full_path,'r') as new_file:
         
         largest = int(new_file.readline().replace('\n',''))

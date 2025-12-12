@@ -3,6 +3,7 @@ PATH = 'c:\\Users\\bension.dworkin\\github_repo\\mooc-programming-25\\part06-txt
 full_path = PATH + 'matrix.txt'
 
 def matrix_sum():
+    ##with open('matrix.txt','r') as new_file:
     with open(full_path,'r') as new_file:
         total = 0
 
@@ -12,6 +13,7 @@ def matrix_sum():
         return total
 
 def matrix_max():
+    ##with open('matrix.txt','r') as new_file:
     with open(full_path,'r') as new_file:
         max_list = [] 
 
@@ -27,6 +29,7 @@ def matrix_max():
         
 
 def row_sums():
+    ##with open('matrix.txt','r') as new_file:
     with open(full_path,'r') as new_file:
         sum_list = []
 

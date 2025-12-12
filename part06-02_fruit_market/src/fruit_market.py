@@ -5,6 +5,7 @@ full_path = PATH + 'fruits.csv'
 def read_fruits():
     fruit_dict = {}
 
+    #with open('fruits.csv','r') as new_file:
     with open(full_path,'r') as new_file:
         for line in new_file:
             line = line.replace('\n','').split(';')
