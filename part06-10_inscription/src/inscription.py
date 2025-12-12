@@ -1,6 +1,6 @@
 
 
-folder = 'C:\\Users\\bension.dworkin\\github_repo\\mooc-programming-25\\part06-txt_files\\'
+folder = 'C:\\Users\\bension.dworkin\\github_repo\\mooc-programming-25\\part06-write_files\\'
 name = input('Whom should I sign this to: ')
 file_name = input('Where shall I save it: ')
 
