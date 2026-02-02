@@ -4,7 +4,11 @@ file_name = 'diary.txt'
 full_path = folder + file_name
 
 while True:
-    choice = int(input('1 - add an entry, 2 - read entries, 0 - quit\nFunction: '))
+    try:
+        choice = int(input('1 - add an entry, 2 - read entries, 0 - quit\nFunction: '))
+    except ValueError:
+        print('Invalid entry')
+        continue
 
     if choice == 1: # add to file
         diary = input('Diary entry: ')
