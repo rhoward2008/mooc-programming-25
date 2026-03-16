@@ -8,9 +8,7 @@ def print_person(filename: str):
         file_data = file_handle.read()
 
     person_list = json.loads(file_data)
-
-    
-    print(person_list)
+    #print(person_list)
 
     for person in person_list:
         print(f'{person['name']} {person['age']} years ',end='')
