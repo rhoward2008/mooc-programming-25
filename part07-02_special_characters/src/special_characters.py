@@ -1,6 +1,6 @@
 import string
 
-def separate_characters(my_string: str) -> list:
+def separate_characters(my_string: str) -> tuple:
     parts = ['','','']
     
     for char in my_string:
@@ -15,7 +15,7 @@ def separate_characters(my_string: str) -> list:
             parts[2] += char
     
     
-    return parts
+    return tuple(parts)
 
 if __name__ == '__main__':
     my_string = 'Olé!!! Hey, are ümläüts wörking?'
