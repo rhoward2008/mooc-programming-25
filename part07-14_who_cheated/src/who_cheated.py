@@ -8,7 +8,7 @@ end_file = PATH + 'submissions.csv'
 def cheaters() -> list:
     '''
     This function reads two csv files.  First one has a list of students with start times.
-    Second one contains a list students with points and hand in times.
+    Second one contains a list of students with points and hand in times.
     Returns a list of cheaters who handed in a task over 3 hours later.
 
     '''
@@ -17,7 +17,7 @@ def cheaters() -> list:
     end_dict = {}
     cheat_list = []
 
-    # Read in the start file and create a dictionary
+    # Read in the start file and create a dictionary of start times
     with open(start_file, 'r') as start_fhandle:
         for line in start_fhandle:
             start_list = line.strip().split(';')
@@ -26,7 +26,7 @@ def cheaters() -> list:
             time_string = hour + ':' + minute
             start_dict[start_list[0]] = datetime.strptime(time_string, '%H:%M')
 
-    # Read in the submissions file and create a dictionary
+    # Read in the submissions file and create a dictionary of end times
     with open(end_file, 'r') as end_fhandle:
         for line in end_fhandle:
             end_list = line.strip().split(';')
